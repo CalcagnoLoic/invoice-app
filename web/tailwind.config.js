@@ -15,7 +15,8 @@ export default {
         burntSienna: "#EC5757",
         monaLisa: "#FF9797",
         whisper: "#F8F8FB",
-        oxfordBlue: "#373B53"
+        oxfordBlue: "#373B53",
+        fiord: "#494E6E"
       },
       fontFamily: {
         spartan: ["spartan"]
