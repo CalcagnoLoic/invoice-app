@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: spartan;
+  src: url(../font/League_Spartan/LeagueSpartan-Regular.ttf);
+}
+
+@layer base {
+  body {
+    @apply font-spartan;
+  }
+}
