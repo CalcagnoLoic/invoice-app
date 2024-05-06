@@ -1,7 +1,10 @@
+import { useTheme } from "../../hooks/useTheme";
+
 import NavBarIcons from "../../icons/NavBarIcons";
 import PROFILE from "../../../public/assets/img/photo.webp";
 
 const Component = () => {
+  const { theme } = useTheme();
   return (
     <nav className="bg-oxfordBlue flex h-[103px] w-full justify-between xl:h-screen xl:w-[103px] xl:flex-col xl:rounded-r-3xl">
       <div>
@@ -9,7 +12,7 @@ const Component = () => {
       </div>
 
       <div className="flex xl:flex-col">
-        <NavBarIcons kind="moon" />
+        {theme ? <NavBarIcons kind="sun" /> : <NavBarIcons kind="moon" />}
 
         <div className="border-fiord flex h-full items-center self-center border-l-2 xl:w-full xl:border-l-0 xl:border-t-2">
           <img
