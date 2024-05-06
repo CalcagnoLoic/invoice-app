@@ -15,7 +15,11 @@ export default {
         burntSienna: "#EC5757",
         monaLisa: "#FF9797",
         whisper: "#F8F8FB",
+        oxfordBlue: "#373B53"
       },
+      fontFamily: {
+        spartan: ["spartan"]
+      }
     },
   },
   plugins: [],
