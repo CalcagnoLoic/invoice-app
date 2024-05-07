@@ -20,7 +20,7 @@ export interface InvoiceIcons {
 }
 
 interface Typographies {
-  content: string;
+  content: string | React.JSX.Element;
   css: string;
 }
 

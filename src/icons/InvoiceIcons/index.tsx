@@ -45,6 +45,7 @@ const Icon = ({ kind }: InvoiceIcons) => {
           viewBox="0 0 242 200"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="block mx-auto"
         >
           <path
             d="M31.136 83.8789L116.171 30.2098L201.207 83.8789V162.183H31.136V83.8789Z"
