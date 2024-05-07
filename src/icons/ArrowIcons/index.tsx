@@ -50,6 +50,26 @@ const Icon = ({ kind }: ArrowIcons) => {
         </svg>
       );
 
+    case "up":
+      return (
+        <svg
+          width="10"
+          height="7"
+          viewBox="0 0 10 7"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="self-center"
+        >
+          <path
+            d="M9 6L5 2L1 6"
+            stroke="#7C5DFA"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      );
+
     default:
       return null;
   }

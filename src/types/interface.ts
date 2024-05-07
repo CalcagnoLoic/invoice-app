@@ -12,7 +12,7 @@ export interface NavBarIcons {
 }
 
 export interface ArrowIcons {
-  kind: "down" | "left" | "right";
+  kind: "down" | "left" | "right" | "up";
 }
 
 export interface InvoiceIcons {
@@ -30,4 +30,18 @@ export interface HeadingsProps extends Typographies {
 
 export interface ParagraphProps extends Typographies {
   kind: "p" | "span";
+}
+
+export interface DropdownType {
+  id: number;
+  content: string;
+  link: string;
+}
+
+export interface CallbackProps {
+  callback: (newValue: boolean) => void;
+}
+
+export interface useClickOutsideProps extends CallbackProps {
+  ref: React.RefObject<HTMLDivElement>;
 }
