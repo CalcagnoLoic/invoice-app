@@ -15,9 +15,9 @@ export const DarkModeProvider = ({ children }: ContextProps) => {
   };
 
   body.remove("bg-whisper");
-  body.remove("bg-mirage");
+  body.remove("bg-mirageDarker");
 
-  theme ? body.add("bg-mirage") : body.add("bg-whisper");
+  theme ? body.add("bg-mirageDarker") : body.add("bg-whisper");
 
   const contextValue: DarkModeProps = { theme, toggleTheme };
 

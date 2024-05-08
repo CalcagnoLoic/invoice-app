@@ -15,7 +15,7 @@ const Icon = ({ kind }: ArrowIcons) => {
           <path
             d="M1 1L5.2279 5.2279L9.4558 1"
             stroke="#7C5DFA"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       );
@@ -32,7 +32,7 @@ const Icon = ({ kind }: ArrowIcons) => {
           <path
             d="M4.3418 0.886047L0.113895 5.11395L4.3418 9.34185"
             stroke="#7C5DFA"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </svg>
       );
@@ -45,8 +45,9 @@ const Icon = ({ kind }: ArrowIcons) => {
           viewBox="0 0 7 10"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="self-center"
         >
-          <path d="M1 1L5 5L1 9" stroke="#7C5DFA" stroke-width="2" />
+          <path d="M1 1L5 5L1 9" stroke="#7C5DFA" strokeWidth="2" />
         </svg>
       );
 

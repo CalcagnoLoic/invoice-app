@@ -5,8 +5,9 @@ import PROFILE from "../../../public/assets/img/photo.webp";
 
 const Component = () => {
   const { theme } = useTheme();
+  
   return (
-    <nav className="bg-oxfordBlue flex h-[103px] w-full justify-between xl:h-screen xl:w-[103px] xl:flex-col xl:rounded-r-3xl xl:absolute xl:top-0">
+    <nav className="bg-mirage flex h-1/6 w-full justify-between xl:h-screen xl:w-[103px] xl:flex-col xl:rounded-r-3xl xl:sticky top-0">
       <div>
         <NavBarIcons kind="background" />
       </div>
