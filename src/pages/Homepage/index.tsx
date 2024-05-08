@@ -1,9 +1,11 @@
 import { useMobile } from "../../hooks/useMobile";
 
 import data from "../../data/data.json";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import InvoiceBoxDesktop from "../../components/Invoice/InvoiceBoxDesktop";
 import InvoiceBoxMobile from "../../components/Invoice/InvoiceBoxMobile";
+import InvoiceContainerLayout from "../../layouts/InvoiceContainerLayout";
 import NoInvoice from "../../components/NoInvoice";
 
 const Page = () => {
@@ -13,7 +15,7 @@ const Page = () => {
     <>
       <Header />
 
-      <div className="mx-6 mt-8 grid grid-cols-1 items-center md:mx-12 md:mt-14 xl:mx-[325px]">
+      <InvoiceContainerLayout>
         {data.length !== 0 ? (
           isMobile ? (
             <InvoiceBoxMobile data={data} />
@@ -23,7 +25,9 @@ const Page = () => {
         ) : (
           <NoInvoice />
         )}
-      </div>
+      </InvoiceContainerLayout>
+
+      <Footer />
     </>
   );
 };
