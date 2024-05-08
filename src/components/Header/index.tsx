@@ -14,12 +14,12 @@ const Component = () => {
   const isMobile = useMobile();
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    e.stopPropagation()
+    e.stopPropagation();
     setIsOpen((prevState) => !prevState);
   };
 
   return (
-    <header className="mx-6 mt-8 flex justify-between md:mx-12 md:mt-12 xl:mx-[350px] xl:mt-20">
+    <header className="mx-6 mt-8 flex justify-between md:mx-12 md:mt-12 xl:mx-[350px] xl:-mt-[90vh]">
       <div>
         <Heading
           kind="h1"

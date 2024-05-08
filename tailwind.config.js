@@ -16,7 +16,12 @@ export default {
         monaLisa: "#FF9797",
         whisper: "#F8F8FB",
         oxfordBlue: "#373B53",
-        fiord: "#494E6E"
+        mirageDarker: "#141625",
+        fiord: "#494E6E",
+        pizazz: "#FF8F00",
+        karry: "#FFEBD1",
+        shamrock: "#33D69F",
+        grannyApple: "#D0F5E9"
       },
       fontFamily: {
         spartan: ["spartan"]

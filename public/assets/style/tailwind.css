@@ -12,3 +12,15 @@
     @apply font-spartan;
   }
 }
+
+@layer components {
+  .round {
+    @apply h-2 w-2 rounded-full;
+  }
+  .status {
+    @apply flex items-center gap-2 px-8 py-3 font-bold capitalize justify-center;
+  }
+  .status-container {
+    @apply self-center rounded-lg w-1/2 md:w-[120px] xl:w-[150px];
+  }
+}
