@@ -16,7 +16,7 @@ const Component = ({ data }: InvoiceProps) => {
       {data.map((invoice: Invoice, index: number) => (
         <Link to={`invoice-app-web/${invoice.id}`}>
           <div
-            className={`mb-4 flex w-full justify-between gap-10 rounded-xl px-6 py-7 shadow-lg ${theme ? "bg-mirage" : "bg-white"}`}
+            className={`mb-4 flex w-full justify-between gap-10 rounded-xl px-6 py-7 shadow-lg duration-75 ease-in-out hover:border-2 hover:border-heliotrope ${theme ? "bg-mirage" : "bg-white"}`}
             key={index}
           >
             <Paragraph
