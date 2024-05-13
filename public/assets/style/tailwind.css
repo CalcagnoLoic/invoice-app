@@ -18,9 +18,15 @@
     @apply h-2 w-2 rounded-full;
   }
   .status {
-    @apply flex items-center gap-2 px-8 py-3 font-bold capitalize justify-center;
+    @apply flex items-center justify-center gap-2 px-8 py-3 font-bold capitalize;
   }
   .status-container {
-    @apply self-center rounded-lg w-1/2 md:w-[120px] xl:w-[150px];
+    @apply w-1/2 self-center rounded-lg md:w-[120px] xl:w-[150px];
+  }
+  .table-col {
+    @apply text-start font-normal text-baliHai;
+  }
+  .table-body {
+    @apply hidden md:table-cell;
   }
 }

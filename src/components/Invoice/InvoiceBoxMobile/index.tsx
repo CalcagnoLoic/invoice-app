@@ -13,7 +13,7 @@ const Component = ({ data }: InvoiceProps) => {
   return (
     <>
       {data.map((invoice: Invoice, index: number) => (
-        <Link to={`invoice-app-web/${invoice.id}`}>
+        <Link to={`${invoice.id}`}>
           <div
             className={`mb-4 flex w-full flex-col rounded-xl  px-6 py-6 shadow-lg ${theme ? "bg-mirage" : "bg-white"}`}
             key={index}
