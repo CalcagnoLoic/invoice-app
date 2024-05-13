@@ -7,7 +7,7 @@ interface SenderAddress {
 
 interface ClientAdress extends SenderAddress {}
 
-interface Items {
+export interface Items {
   name: string;
   quantity: number;
   price: number;
@@ -25,12 +25,17 @@ export interface Invoice {
   status: string;
   senderAddress: SenderAddress;
   clientAddress: ClientAdress;
-  items: Items | Items[];
+  items: Items[];
   total: number;
 }
 
 export interface InvoiceProps {
   data: Invoice[];
+}
+
+export interface InvoiceDetails {
+  filteredData: Invoice;
+  theme: boolean;
 }
 
 export interface ContextProps {
@@ -56,7 +61,7 @@ export interface InvoiceIcons {
 
 interface Typographies {
   content: string | React.JSX.Element;
-  css: string;
+  css?: string;
 }
 
 export interface HeadingsProps extends Typographies {

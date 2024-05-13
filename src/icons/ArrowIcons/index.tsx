@@ -28,6 +28,7 @@ const Icon = ({ kind }: ArrowIcons) => {
           viewBox="0 0 6 11"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="self-center "
         >
           <path
             d="M4.3418 0.886047L0.113895 5.11395L4.3418 9.34185"
@@ -56,7 +57,6 @@ const Icon = ({ kind }: ArrowIcons) => {
         <svg
           width="10"
           height="7"
-          viewBox="0 0 10 7"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           className="self-center"
