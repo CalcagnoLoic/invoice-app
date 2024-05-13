@@ -52,7 +52,7 @@ const Component = ({ data }: InvoiceProps) => {
 
                 <Paragraph
                   kind="p"
-                  content={`£ ${convertPrice(invoice.total.toFixed(2))}`}
+                  content={`£ ${convertPrice(invoice.total)}`}
                   css={`text-xl font-bold ${theme ? "text-white" : "text-vulcan"}`}
                 />
               </div>

@@ -3,8 +3,8 @@ export const convertPrice = (invoicePrice: number): string => {
   const pattern = /\B(?=(\d{3})+(?!\d))/g;
 
   if (pattern.test(priceString)) {
-    return priceString.replace(pattern, ",");
+    return Number(priceString.replace(pattern, ",")).toFixed(2);
   } else {
-    return priceString;
+    return Number(priceString).toFixed(2);
   }
 };

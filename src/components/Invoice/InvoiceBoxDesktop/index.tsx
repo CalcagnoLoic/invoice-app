@@ -14,7 +14,7 @@ const Component = ({ data }: InvoiceProps) => {
   return (
     <>
       {data.map((invoice: Invoice, index: number) => (
-        <Link to={`invoice-app-web/${invoice.id}`}>
+        <Link to={`${invoice.id}`}>
           <div
             className={`mb-4 flex w-full justify-between gap-10 rounded-xl px-6 py-7 shadow-lg duration-75 ease-in-out hover:border-2 hover:border-heliotrope ${theme ? "bg-mirage" : "bg-white"}`}
             key={index}
@@ -49,7 +49,7 @@ const Component = ({ data }: InvoiceProps) => {
 
             <Paragraph
               kind="p"
-              content={`£ ${convertPrice(invoice.total.toFixed(2))}`}
+              content={`£ ${convertPrice(invoice.total)}`}
               css={`text-xl font-bold self-center ${theme ? "text-white" : "text-vulcan"}`}
             />
             <div className="flex justify-between gap-5">
