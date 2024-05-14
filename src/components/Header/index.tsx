@@ -1,4 +1,5 @@
 import { useMobile } from "../../hooks/useMobile";
+import { useNavigate } from "react-router";
 import { useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
 
@@ -12,10 +13,15 @@ const Component = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { theme } = useTheme();
   const isMobile = useMobile();
+  const navigate = useNavigate();
 
   const handleClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.stopPropagation();
     setIsOpen((prevState) => !prevState);
+  };
+
+  const handleNavigate = () => {
+    navigate("/invoice-app-web/new-invoice");
   };
 
   return (
@@ -49,7 +55,10 @@ const Component = () => {
         </div>
         {isOpen && <Dropdown callback={setIsOpen} />}
 
-        <button className="flex rounded-full bg-cornflowerBlue p-4 font-bold text-white hover:bg-heliotrope">
+        <button
+          className="flex rounded-full bg-cornflowerBlue p-4 font-bold text-white hover:bg-heliotrope"
+          onClick={() => handleNavigate()}
+        >
           <div className="mr-4 self-center rounded-full bg-white p-2">
             <InvoiceIcons kind="add" />
           </div>

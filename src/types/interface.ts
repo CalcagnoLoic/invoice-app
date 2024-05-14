@@ -59,9 +59,13 @@ export interface InvoiceIcons {
   kind: "add" | "remove" | "empty";
 }
 
-export interface ContentProps {
+interface ContentProps {
   content: string | React.JSX.Element;
   css?: string;
+}
+
+export interface Popup extends ContentProps {
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 export interface HeadingsProps extends ContentProps {
@@ -88,4 +92,6 @@ export interface useClickOutsideProps extends CallbackProps {
 
 export interface Status {
   invoiceStatus: string;
+  id?: string;
+  theme?: boolean;
 }

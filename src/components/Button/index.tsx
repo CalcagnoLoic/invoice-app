@@ -1,8 +1,9 @@
-import { ContentProps } from "../../types/interface";
+import { Popup } from "../../types/interface";
 
-const Component = ({ content, css }: ContentProps) => (
+const Component = ({ content, css, onClick }: Popup) => (
   <button
-    className={`self-center rounded-full px-6 py-4 duration-300 ease-in-out hover:opacity-75 ${css}`}
+    className={`rounded-full px-6 py-4 hover:opacity-75 ${css}`}
+    onClick={onClick}
   >
     {content}
   </button>
