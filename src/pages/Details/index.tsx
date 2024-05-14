@@ -44,7 +44,11 @@ const Page = () => {
 
           <div className="hidden md:flex md:self-center">
             {filteredData && (
-              <InvoiceCommands invoiceStatus={filteredData.status} />
+              <InvoiceCommands
+                invoiceStatus={filteredData.status}
+                id={id}
+                theme={theme}
+              />
             )}
           </div>
         </div>
@@ -66,7 +70,11 @@ const Page = () => {
         className={`mt-8 w-full p-6 md:hidden ${theme ? "bg-mirage" : "bg-white"} `}
       >
         {filteredData && (
-          <InvoiceCommands invoiceStatus={filteredData.status} />
+          <InvoiceCommands
+            invoiceStatus={filteredData.status}
+            id={id}
+            theme={theme}
+          />
         )}
       </div>
     </>

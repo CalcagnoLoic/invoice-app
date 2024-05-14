@@ -7,6 +7,7 @@ import Details from "./pages/Details";
 import Error404 from "./pages/Error404";
 import Homepage from "./pages/Homepage";
 import NavBar from "./components/NavBar";
+import NewInvoice from "./pages/NewInvoice";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Routes>
           <Route path="/invoice-app-web" element={<Homepage />} />
           <Route path="/invoice-app-web/:id" element={<Details />} />
+          <Route path="/invoice-app-web/new-invoice" element={<NewInvoice />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </Router>
