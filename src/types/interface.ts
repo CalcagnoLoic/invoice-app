@@ -59,16 +59,16 @@ export interface InvoiceIcons {
   kind: "add" | "remove" | "empty";
 }
 
-interface Typographies {
+export interface ContentProps {
   content: string | React.JSX.Element;
   css?: string;
 }
 
-export interface HeadingsProps extends Typographies {
+export interface HeadingsProps extends ContentProps {
   kind: "h1" | "h2" | "h3";
 }
 
-export interface ParagraphProps extends Typographies {
+export interface ParagraphProps extends ContentProps {
   kind: "p" | "span";
 }
 
