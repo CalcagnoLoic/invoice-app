@@ -95,3 +95,15 @@ export interface Status {
   id?: string;
   theme?: boolean;
 }
+
+export interface InputField {
+  fieldValue: string;
+  fieldID: string;
+  fieldType?: string;
+  isSelect?: boolean;
+  css?: string;
+}
+
+export interface FormSend {
+  FormSend: React.JSX.Element | React.JSX.Element[];
+}

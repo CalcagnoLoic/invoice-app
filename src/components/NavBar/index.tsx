@@ -7,7 +7,7 @@ const Component = () => {
   const { theme } = useTheme();
   
   return (
-    <nav className="bg-mirage flex h-1/6 w-full justify-between xl:h-screen xl:w-[103px] xl:flex-col xl:rounded-r-3xl xl:sticky top-0 z-10">
+    <nav className="bg-mirage flex h-1/6 w-full justify-between xl:h-screen xl:w-[103px] xl:flex-col xl:rounded-r-3xl sticky top-0 z-10">
       <div>
         <NavBarIcons kind="background" />
       </div>
