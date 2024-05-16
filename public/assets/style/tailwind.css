@@ -14,6 +14,21 @@
 }
 
 @layer components {
+  .form-container {
+    @apply fixed md:w-2/3 md:px-14 xl:w-1/2 xl:pl-[160px];
+  }
+  .form-group {
+    @apply mt-3 flex flex-col;
+  }
+  .form-input {
+    @apply mt-2 rounded-lg border-2 p-4 font-bold;
+  }
+  .form-title {
+    @apply mt-12 font-bold text-heliotrope;
+  }
+  label {
+    @apply text-baliHai;
+  }
   .round {
     @apply h-2 w-2 rounded-full;
   }
