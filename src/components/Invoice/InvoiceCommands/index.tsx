@@ -1,4 +1,5 @@
 import { useClickOutside } from "../../../hooks/useClickOutside";
+import { useNavigate } from "react-router-dom";
 import { MouseEvent, useRef, useState } from "react";
 import { Status } from "../../../types/interface";
 
@@ -9,6 +10,7 @@ import Paragraph from "../../../typographies/Paragraph";
 const Component = ({ invoiceStatus, id, theme }: Status) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const popupRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     e.stopPropagation();
@@ -16,6 +18,10 @@ const Component = ({ invoiceStatus, id, theme }: Status) => {
   };
 
   useClickOutside({ callback: setIsOpen, ref: popupRef });
+
+  const handleEdit = () => {
+    navigate(`/invoice-app-web/edit-invoice/${id}`);
+  };
 
   return (
     <>
@@ -25,6 +31,7 @@ const Component = ({ invoiceStatus, id, theme }: Status) => {
           css={`
             ${theme ? "bg-ebonyClay text-white" : "bg-selago text-baliHai"}
           `}
+          onClick={() => handleEdit()}
         />
         <Button
           content="Delete"
