@@ -21,7 +21,7 @@
     @apply mt-3 flex flex-col;
   }
   .form-input {
-    @apply mt-2 rounded-lg border-2 p-4 font-bold;
+    @apply mt-2 rounded-lg border-2 p-4 font-bold w-full max-w-full;
   }
   .form-title {
     @apply mt-12 font-bold text-heliotrope;

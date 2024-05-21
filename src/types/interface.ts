@@ -47,6 +47,12 @@ export interface DarkModeProps {
   toggleTheme: () => void;
 }
 
+export interface ItemsProps {
+  itemCount: number;
+  addItems: () => void;
+  removeItems: () => void;
+}
+
 export interface NavBarIcons {
   kind: "background" | "sun" | "moon" | "logo";
 }
@@ -74,6 +80,7 @@ export interface HeadingsProps extends ContentProps {
 
 export interface ParagraphProps extends ContentProps {
   kind: "p" | "span";
+  onClick: () => void;
 }
 
 export interface DropdownType {
@@ -106,4 +113,14 @@ export interface InputField {
 
 export interface FormSend {
   FormSend: React.JSX.Element | React.JSX.Element[];
+}
+
+export interface FormAddress {
+  isClientInfos: boolean;
+}
+
+export interface FormItems {
+  itemName: string;
+  quantity: string;
+  price: string;
 }
