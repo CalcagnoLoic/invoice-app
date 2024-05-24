@@ -17,10 +17,10 @@ export interface Items {
 export interface Invoice {
   id: string;
   createdAt: string;
-  paymentDue: string;
+  payment_due: string;
   description: string;
   paymentTerms: number;
-  clientName: string;
+  client_name: string;
   clientEmail: string;
   status: string;
   senderAddress: SenderAddress;
@@ -80,7 +80,7 @@ export interface HeadingsProps extends ContentProps {
 
 export interface ParagraphProps extends ContentProps {
   kind: "p" | "span";
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export interface DropdownType {

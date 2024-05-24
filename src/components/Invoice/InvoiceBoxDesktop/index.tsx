@@ -37,13 +37,13 @@ const Component = ({ data }: InvoiceProps) => {
 
             <Paragraph
               kind="p"
-              content={`Due ${convertDate(invoice.paymentDue)}`}
+              content={`Due ${convertDate(invoice.payment_due)}`}
               css="text-baliHai self-center"
             />
 
             <Paragraph
               kind="p"
-              content={invoice.clientName}
+              content={invoice.client_name}
               css="text-baliHai self-center justify-start"
             />
 

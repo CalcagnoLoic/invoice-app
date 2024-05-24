@@ -1,6 +1,6 @@
+import { useFetch } from "../../hooks/useFetch";
 import { useMobile } from "../../hooks/useMobile";
 
-import data from "../../data/data.json";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import InvoiceBoxDesktop from "../../components/Invoice/InvoiceBoxDesktop";
@@ -10,6 +10,8 @@ import NoInvoice from "../../components/NoInvoice";
 
 const Page = () => {
   const isMobile = useMobile();
+
+  const data = useFetch("invoice");
 
   return (
     <>
