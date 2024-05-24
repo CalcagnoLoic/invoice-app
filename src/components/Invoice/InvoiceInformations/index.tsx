@@ -11,7 +11,7 @@ const Component = ({ filteredData, theme }: InvoiceDetails) => (
         <Heading kind="h3" content="Invoice Date" css="mb-3 text-baliHai" />
         <Paragraph
           kind="span"
-          content={convertDate(filteredData.createdAt)}
+          content={convertDate(filteredData.created_at)}
           css={`text-xl font-bold ${theme ? "text-white" : "text-vulcan"}`}
         />
 
@@ -22,7 +22,7 @@ const Component = ({ filteredData, theme }: InvoiceDetails) => (
         />
         <Paragraph
           kind="span"
-          content={convertDate(filteredData.paymentDue)}
+          content={convertDate(filteredData.payment_due)}
           css={`text-xl font-bold ${theme ? "text-white" : "text-vulcan"}`}
         />
       </div>
@@ -31,27 +31,27 @@ const Component = ({ filteredData, theme }: InvoiceDetails) => (
         <Heading kind="h3" content="Bill to" css="text-baliHai" />
         <Paragraph
           kind="span"
-          content={filteredData.clientName}
+          content={filteredData.client_name}
           css={`my-3 block text-xl font-bold ${theme ? "text-white" : "text-vulcan"}`}
         />
         <Paragraph
           kind="p"
-          content={filteredData.clientAddress.street}
+          content={filteredData.client_address.street}
           css="text-baliHai"
         />
         <Paragraph
           kind="p"
-          content={filteredData.clientAddress.city}
+          content={filteredData.client_address.city}
           css="text-baliHai"
         />
         <Paragraph
           kind="p"
-          content={filteredData.clientAddress.postCode}
+          content={filteredData.client_address.postCode}
           css="text-baliHai"
         />
         <Paragraph
           kind="p"
-          content={filteredData.clientAddress.country}
+          content={filteredData.client_address.country}
           css="text-baliHai"
         />
       </div>
@@ -61,7 +61,7 @@ const Component = ({ filteredData, theme }: InvoiceDetails) => (
       <Heading kind="h3" content="Sent to" css="mb-3 text-baliHai" />
       <Paragraph
         kind="span"
-        content={filteredData.clientEmail}
+        content={filteredData.client_email}
         css={`text-xl font-bold ${theme ? "text-white" : "text-vulcan"}`}
       />
     </article>

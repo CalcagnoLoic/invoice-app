@@ -11,7 +11,7 @@ import NoInvoice from "../../components/NoInvoice";
 const Page = () => {
   const isMobile = useMobile();
 
-  const data = useFetch("invoice");
+  const data = useFetch("invoices");
 
   return (
     <>

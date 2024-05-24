@@ -22,10 +22,10 @@ const Component = ({ filteredData, theme }: InvoiceDetails) => (
     </div>
 
     <div className="mt-7 text-baliHai md:mt-0">
-      <Paragraph kind="p" content={filteredData.senderAddress.street} />
-      <Paragraph kind="p" content={filteredData.senderAddress.city} />
-      <Paragraph kind="p" content={filteredData.senderAddress.postCode} />
-      <Paragraph kind="p" content={filteredData.senderAddress.country} />
+      <Paragraph kind="p" content={filteredData.sender_address.street} />
+      <Paragraph kind="p" content={filteredData.sender_address.city} />
+      <Paragraph kind="p" content={filteredData.sender_address.postCode} />
+      <Paragraph kind="p" content={filteredData.sender_address.country} />
     </div>
   </section>
 );

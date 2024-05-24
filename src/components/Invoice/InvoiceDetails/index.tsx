@@ -27,26 +27,26 @@ const Component = ({ filteredData, theme }: InvoiceDetails) => (
         </thead>
 
         <tbody>
-          {filteredData.items.map((test: Items, index: number) => (
+          {filteredData.items.map((item: Items, index: number) => (
             <tr
               key={index}
               className={`font-bold ${theme ? "text-white" : "text-vulcan"}`}
             >
               <td className="flex flex-col md:hidden md:flex-row">
-                <Paragraph kind="span" content={test.name} />
+                <Paragraph kind="span" content={item.name} />
                 <Paragraph
                   kind="span"
-                  content={`${test.quantity} x £ ${convertPrice(test.price)}`}
+                  content={`${item.quantity} x £ ${convertPrice(item.price)}`}
                   css="text-baliHai"
                 />
               </td>
 
-              <td className="table-body">{test.name}</td>
-              <td className="table-body text-center">{test.quantity}</td>
+              <td className="table-body">{item.name}</td>
+              <td className="table-body text-center">{item.quantity}</td>
               <td className="table-body text-end">
-                £ {convertPrice(test.price)}
+                £ {convertPrice(item.price)}
               </td>
-              <td className="text-end">£ {convertPrice(test.total)}</td>
+              <td className="text-end">£ {convertPrice(item.total)}</td>
             </tr>
           ))}
         </tbody>

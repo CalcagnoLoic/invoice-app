@@ -16,15 +16,15 @@ export interface Items {
 
 export interface Invoice {
   id: string;
-  createdAt: string;
+  created_at: string;
   payment_due: string;
   description: string;
   paymentTerms: number;
   client_name: string;
-  clientEmail: string;
+  client_email: string;
   status: string;
-  senderAddress: SenderAddress;
-  clientAddress: ClientAdress;
+  sender_address: SenderAddress;
+  client_address: ClientAdress;
   items: Items[];
   total: number;
 }

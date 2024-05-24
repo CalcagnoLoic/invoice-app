@@ -1,9 +1,9 @@
+import { useFetch } from "../../hooks/useFetch";
 import { useParams, Link } from "react-router-dom";
 import { useTheme } from "../../hooks/useTheme";
 
 import ArrowIcons from "../../icons/ArrowIcons";
 import InvoiceCommands from "../../components/Invoice/InvoiceCommands";
-import invoiceData from "../../data/data.json";
 import InvoiceDetails from "../../components/Invoice/InvoiceDetails";
 import InvoiceInformations from "../../components/Invoice/InvoiceInformations";
 import InvoiceHeader from "../../components/Invoice/InvoiceHeader";
@@ -13,8 +13,11 @@ import Paragraph from "../../typographies/Paragraph";
 const Page = () => {
   const { id } = useParams();
   const { theme } = useTheme();
+  const filteredData = useFetch(`invoices/${id}`)
 
-  const filteredData = invoiceData.find((invoice) => id === invoice.id);
+
+  console.log(filteredData);
+  
 
   return (
     <>
