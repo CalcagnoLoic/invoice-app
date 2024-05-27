@@ -1,6 +1,9 @@
+import { useItem } from "../../hooks/useItem";
 import { InvoiceIcons } from "../../types/interface";
 
 const Icon = ({ kind }: InvoiceIcons) => {
+  const { removeItems } = useItem();
+
   switch (kind) {
     case "add":
       return (
@@ -27,7 +30,8 @@ const Icon = ({ kind }: InvoiceIcons) => {
           viewBox="0 0 13 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="self-center cursor-pointer hover:fill-burntSienna fill-baliHai mt-7"
+          className="mt-7 cursor-pointer self-center fill-baliHai hover:fill-burntSienna"
+          onClick={() => removeItems()}
         >
           <path
             fillRule="evenodd"
@@ -45,7 +49,7 @@ const Icon = ({ kind }: InvoiceIcons) => {
           viewBox="0 0 242 200"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="block mx-auto"
+          className="mx-auto block"
         >
           <path
             d="M31.136 83.8789L116.171 30.2098L201.207 83.8789V162.183H31.136V83.8789Z"

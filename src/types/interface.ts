@@ -1,7 +1,7 @@
 interface SenderAddress {
   street: string;
   city: string;
-  postCode: string;
+  post_code: string;
   country: string;
 }
 
@@ -16,15 +16,15 @@ export interface Items {
 
 export interface Invoice {
   id: string;
-  createdAt: string;
-  paymentDue: string;
+  created_at: string;
+  payment_due: string;
   description: string;
   paymentTerms: number;
-  clientName: string;
-  clientEmail: string;
+  client_name: string;
+  client_email: string;
   status: string;
-  senderAddress: SenderAddress;
-  clientAddress: ClientAdress;
+  sender_address: SenderAddress;
+  client_address: ClientAdress;
   items: Items[];
   total: number;
 }
@@ -45,6 +45,12 @@ export interface ContextProps {
 export interface DarkModeProps {
   theme: boolean;
   toggleTheme: () => void;
+}
+
+export interface ItemsProps {
+  itemCount: number;
+  addItems: () => void;
+  removeItems: () => void;
 }
 
 export interface NavBarIcons {
@@ -74,6 +80,7 @@ export interface HeadingsProps extends ContentProps {
 
 export interface ParagraphProps extends ContentProps {
   kind: "p" | "span";
+  onClick?: () => void;
 }
 
 export interface DropdownType {
@@ -106,4 +113,14 @@ export interface InputField {
 
 export interface FormSend {
   FormSend: React.JSX.Element | React.JSX.Element[];
+}
+
+export interface FormAddress {
+  isClientInfos: boolean;
+}
+
+export interface FormItems {
+  itemName: string;
+  quantity: string;
+  price: string;
 }

@@ -8,8 +8,10 @@ import Dropdown from "../Dropdown";
 import Heading from "../../typographies/Heading";
 import InvoiceIcons from "../../icons/InvoiceIcons";
 import Paragraph from "../../typographies/Paragraph";
+import { useFetch } from "../../hooks/useFetch";
 
 const Component = () => {
+  const { data } = useFetch("invoices");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { theme } = useTheme();
   const isMobile = useMobile();
@@ -34,7 +36,11 @@ const Component = () => {
         />
         <Paragraph
           kind="p"
-          content={isMobile ? "7 invoices" : "There are 7 total invoices"}
+          content={
+            isMobile
+              ? `${data.length} invoices`
+              : `There are ${data.length} invoices`
+          }
           css={`
             ${theme ? "text-selago" : "text-baliHai"}
           `}
