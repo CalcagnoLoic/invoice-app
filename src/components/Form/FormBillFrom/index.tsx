@@ -11,14 +11,14 @@ const Component = () => {
   return (
     <div>
       <div className="form-group">
-        <Label htmlFor="streetAddress" content="Street Address" />
+        <Label htmlFor="street" content="Street Address" />
         <Field
-          name="streetAddress"
+          name="street"
           placeholder="Your street address"
           className={`form-input ${theming}`}
         />
         <ErrorMessage
-          name="streetAddress"
+          name="street"
           component="span"
           className="text-burntSienna"
         />

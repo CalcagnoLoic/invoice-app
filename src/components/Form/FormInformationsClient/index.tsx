@@ -9,36 +9,38 @@ const Component = () => {
 
   return (
     <div className="form-group">
-      <Label htmlFor="clientName" content="Client's Name" />
+      <Label htmlFor="client_name" content="Client's Name" />
       <Field
-        name="clientName"
+        name="client_name"
         placeholder="Your name"
         className={`form-input ${theming}`}
       />
       <ErrorMessage
-        name="clientName"
+        name="client_name"
         component="span"
         className="text-burntSienna"
       />
-      <Label htmlFor="clientMail" content="Client's Mail" />
+      
+      <Label htmlFor="client_email" content="Client's Mail" />
       <Field
-        name="clientMail"
+        name="client_email"
         placeholder="Your email"
         className={`form-input mt-3 ${theming}`}
       />
       <ErrorMessage
-        name="clientMail"
+        name="client_email"
         component="span"
         className="text-burntSienna"
       />
-      <Label htmlFor="clientAddress" content="Client's Address" />
+
+      <Label htmlFor="client_street" content="Client's Address" />
       <Field
-        name="clientAddress"
+        name="client_street"
         placeholder="Your address"
         className={`form-input mt-3 ${theming}`}
       />
       <ErrorMessage
-        name="clientAddress"
+        name="client_street"
         component="span"
         className="text-burntSienna"
       />

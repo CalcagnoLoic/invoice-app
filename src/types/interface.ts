@@ -5,7 +5,12 @@ interface SenderAddress {
   country: string;
 }
 
-interface ClientAdress extends SenderAddress {}
+interface ClientAdress {
+  client_street: string;
+  client_city: string;
+  client_postCode: string;
+  client_country: string;
+}
 
 export interface Items {
   name: string;

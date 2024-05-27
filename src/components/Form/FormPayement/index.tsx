@@ -9,20 +9,20 @@ const Component = () => {
   return (
     <>
       <div className="flex flex-col">
-        <Label htmlFor="invoiceDate" content="Invoice Date" />
+        <Label htmlFor="payment_due" content="Invoice Date" />
         <Field
           className={`form-input text-baliHai ${theming}`}
-          name="invoiceDate"
+          name="payment_due"
           type="date"
           css="md:w-full"
         />
       </div>
 
       <div className="flex flex-col">
-        <Label htmlFor="paymentTerms" content="Payment Terms" />
+        <Label htmlFor="payment_terms" content="Payment Terms" />
         <Field
-          className={`form-input text-baliHai p-[19px] ${theming}`}
-          name="paymentTerms"
+          className={`form-input p-[19px] text-baliHai ${theming}`}
+          name="payment_terms"
           css="md:w-full mt-3 md:mt-0"
           as="select"
         >

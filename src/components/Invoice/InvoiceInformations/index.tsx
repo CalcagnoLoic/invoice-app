@@ -38,22 +38,22 @@ const Component = ({ filteredData, theme }: InvoiceDetails) => (
           <>
             <Paragraph
               kind="p"
-              content={filteredData.client_address.street || "N/A"}
+              content={filteredData.client_address.client_street || "N/A"}
               css="text-baliHai"
             />
             <Paragraph
               kind="p"
-              content={filteredData.client_address.city || "N/A"}
+              content={filteredData.client_address.client_city || "N/A"}
               css="text-baliHai"
             />
             <Paragraph
               kind="p"
-              content={filteredData.client_address.post_code || "N/A"}
+              content={filteredData.client_address.client_postCode || "N/A"}
               css="text-baliHai"
             />
             <Paragraph
               kind="p"
-              content={filteredData.client_address.country || "N/A"}
+              content={filteredData.client_address.client_country || "N/A"}
               css="text-baliHai"
             />
           </>
