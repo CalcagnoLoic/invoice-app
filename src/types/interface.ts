@@ -1,7 +1,7 @@
 interface SenderAddress {
   street: string;
   city: string;
-  postCode: string;
+  post_code: string;
   country: string;
 }
 

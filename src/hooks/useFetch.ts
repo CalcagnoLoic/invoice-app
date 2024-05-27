@@ -9,6 +9,8 @@ const client = axios.create({
 
 export const useFetch = (endpoint: string) => {
   const [data, setData] = useState<Invoice[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     const getData = async () => {
@@ -16,12 +18,20 @@ export const useFetch = (endpoint: string) => {
         const res = await client.get(`/${endpoint}`);
         setData(res.data);
       } catch (error) {
-        console.log(error);
+        if (error instanceof Error) setError(error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     getData();
+
+    return () => {
+      setData([]);
+      setIsLoading(true);
+      setError(null);
+    };
   }, [endpoint]);
 
-  return data;
+  return { data, isLoading, error };
 };
