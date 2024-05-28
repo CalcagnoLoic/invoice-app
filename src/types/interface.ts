@@ -1,11 +1,16 @@
 interface SenderAddress {
   street: string;
   city: string;
-  post_code: string;
+  postCode: string;
   country: string;
 }
 
-interface ClientAdress extends SenderAddress {}
+interface ClientAdress {
+  client_street: string;
+  client_city: string;
+  client_postCode: string;
+  client_country: string;
+}
 
 export interface Items {
   name: string;

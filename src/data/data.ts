@@ -7,22 +7,22 @@ export const dropdownItems: DropdownType[] = [
 ];
 
 export const initialValues = {
-  streetAddress: "",
+  street: "",
   city: "",
   postCode: "",
   country: "",
-  clientName: "",
-  clientMail: "",
-  clientAddress: "",
-  clientCity: "",
-  clientPostCode: "",
-  clientCountry: "",
-  invoiceDate: "",
-  payementTerms: "",
+  client_name: "",
+  client_email: "",
+  client_street: "",
+  client_city: "",
+  client_postCode: "",
+  client_country: "",
+  payment_due: "",
+  payment_terms: "",
   description: "",
   items: [
     {
-      itemName: "",
+      name: "",
       quantity: "",
       price: "",
     },

@@ -16,32 +16,32 @@ const Component = ({ isClientInfos }: FormAddress) => {
       <div className="flex w-full flex-row space-x-4 ">
         <div className="flex w-1/2 flex-col">
           <Label
-            htmlFor={isClientInfos ? "clientCity" : "city"}
+            htmlFor={isClientInfos ? "client_city" : "city"}
             content="City"
           />
           <Field
-            name={isClientInfos ? "clientCity" : "city"}
+            name={isClientInfos ? "client_city" : "city"}
             placeholder="Your city"
             className={`form-input ${theming}`}
           />
           <ErrorMessage
-            name={isClientInfos ? "clientCity" : "city"}
+            name={isClientInfos ? "client_city" : "city"}
             component="span"
             className="text-burntSienna"
           />
         </div>
         <div className="flex w-1/2 flex-col">
           <Label
-            htmlFor={isClientInfos ? "clientPostCode" : "postCode"}
+            htmlFor={isClientInfos ? "client_postCode" : "postCode"}
             content="Post Code"
           />
           <Field
-            name={isClientInfos ? "clientPostCode" : "postCode"}
+            name={isClientInfos ? "client_postCode" : "postCode"}
             placeholder="Your post code"
             className={`form-input ${theming}`}
           />
           <ErrorMessage
-            name={isClientInfos ? "clientPostCode" : "postCode"}
+            name={isClientInfos ? "client_postCode" : "postCode"}
             component="span"
             className="text-burntSienna"
           />
@@ -49,16 +49,16 @@ const Component = ({ isClientInfos }: FormAddress) => {
       </div>
       <div className="mt-3 flex w-full flex-col md:mt-0 md:w-1/2">
         <Label
-          htmlFor={isClientInfos ? "clientCountry" : "country"}
+          htmlFor={isClientInfos ? "client_country" : "country"}
           content="Country"
         />
         <Field
-          name={isClientInfos ? "clientCountry" : "country"}
+          name={isClientInfos ? "client_country" : "country"}
           placeholder="Your country"
           className={`form-input ${theming}`}
         />
         <ErrorMessage
-          name={isClientInfos ? "clientCountry" : "country"}
+          name={isClientInfos ? "client_country" : "country"}
           component="span"
           className="text-burntSienna"
         />
