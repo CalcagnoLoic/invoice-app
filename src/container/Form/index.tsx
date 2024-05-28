@@ -83,9 +83,6 @@ const Container = ({ FormSend }: FormSend) => {
           css={`mt-12 flex justify-center rounded-full py-4 md:mt-4 cursor-pointer duration-300 ease-in-out ${theme ? "bg-mirage text-baliHai hover:brightness-150" : "bg-whisper text-shipCove hover:bg-selago"}`}
           onClick={() => addItems()}
         />
-
-        <button type="submit">test</button>
-
         {FormSend}
       </Form>
     </Formik>
