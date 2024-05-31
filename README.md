@@ -6,7 +6,6 @@
   </a>
 </p>
 
-
 ## Pour lancer le frontend
 
 ```cmd

@@ -13,23 +13,23 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Background: Story = {
-    args: {
-        kind: "background"
-    }
-}
+  args: {
+    kind: "background",
+  },
+};
 export const LightMode: Story = {
-    args: {
-        kind: "sun"
-    }
-}
+  args: {
+    kind: "sun",
+  },
+};
 export const DarkMode: Story = {
-    args: {
-        kind: "moon"
-    }
-}
+  args: {
+    kind: "moon",
+  },
+};
 export const Logo: Story = {
-    name: "Logo (Switch in dark mode 🌙 )",
-    args: {
-        kind: "logo"
-    }
-}
+  name: "Logo (Switch in dark mode 🌙 )",
+  args: {
+    kind: "logo",
+  },
+};

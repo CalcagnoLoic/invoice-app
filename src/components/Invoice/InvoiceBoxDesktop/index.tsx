@@ -12,8 +12,8 @@ import Paragraph from "../../../typographies/Paragraph";
 const Component = ({ data }: InvoiceProps) => {
   const { theme } = useTheme();
   const { filterInvoices, filters } = useFilter();
-  
-  const noFiltersSelected = Object.values(filters).every(filter => !filter);
+
+  const noFiltersSelected = Object.values(filters).every((filter) => !filter);
   const filteredData = noFiltersSelected ? data : filterInvoices(data);
 
   return (

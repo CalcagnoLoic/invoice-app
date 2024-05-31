@@ -20,7 +20,7 @@ const Component = () => {
         component="span"
         className="text-burntSienna"
       />
-      
+
       <Label htmlFor="client_email" content="Client's Mail" />
       <Field
         name="client_email"

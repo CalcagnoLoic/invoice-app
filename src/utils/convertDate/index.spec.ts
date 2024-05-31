@@ -49,7 +49,7 @@ describe("convertDate Unit Test Suite", () => {
   it("should return 8 Nov 2024", () => {
     expect(convertDate("2024-11-08")).toBe("8 Nov 2024");
   });
-  
+
   it("should return 8 Dec 2024", () => {
     expect(convertDate("2024-12-08")).toBe("8 Dec 2024");
   });
