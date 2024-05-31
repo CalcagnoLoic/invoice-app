@@ -6,13 +6,13 @@ const Component = ({ invoiceStatus }: Status) => {
   switch (invoiceStatus) {
     case "paid":
       return (
-        <div className="bg-grannyApple status-container bg-opacity-35">
+        <div className="status-container bg-grannyApple bg-opacity-35">
           <Paragraph
             kind="span"
             css="text-shamrock status"
             content={
               <>
-                <div className="bg-shamrock round"></div>
+                <div className="round bg-shamrock"></div>
                 {invoiceStatus}
               </>
             }
@@ -22,13 +22,13 @@ const Component = ({ invoiceStatus }: Status) => {
 
     case "pending":
       return (
-        <div className="bg-karry status-container bg-opacity-35">
+        <div className="status-container bg-karry bg-opacity-35">
           <Paragraph
             kind="span"
             css="text-pizazz status"
             content={
               <>
-                <div className="bg-pizazz round"></div>
+                <div className="round bg-pizazz"></div>
                 {invoiceStatus}
               </>
             }

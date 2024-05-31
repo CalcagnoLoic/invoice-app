@@ -5,9 +5,9 @@ import PROFILE from "../../../public/assets/img/photo.webp";
 
 const Component = () => {
   const { theme } = useTheme();
-  
+
   return (
-    <nav className="bg-mirage flex h-1/6 w-full justify-between xl:h-screen xl:w-[103px] xl:flex-col xl:rounded-r-3xl sticky top-0 z-10">
+    <nav className="sticky top-0 z-10 flex h-1/6 w-full justify-between bg-mirage xl:h-screen xl:w-[103px] xl:flex-col xl:rounded-r-3xl">
       <div>
         <NavBarIcons kind="background" />
       </div>
@@ -15,7 +15,7 @@ const Component = () => {
       <div className="flex xl:flex-col">
         {theme ? <NavBarIcons kind="sun" /> : <NavBarIcons kind="moon" />}
 
-        <div className="border-fiord flex h-full items-center self-center border-l-2 xl:w-full xl:border-l-0 xl:border-t-2">
+        <div className="flex h-full items-center self-center border-l-2 border-fiord xl:w-full xl:border-l-0 xl:border-t-2">
           <img
             src={PROFILE}
             alt="My Profile"

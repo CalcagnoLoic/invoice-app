@@ -42,7 +42,6 @@ export const DeleteButton: Story = {
   },
 };
 
-
 export const HomepageButton: Story = {
   args: {
     content: "go to Homepage",

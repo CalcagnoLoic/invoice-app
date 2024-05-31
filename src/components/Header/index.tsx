@@ -1,19 +1,21 @@
+import { useFetch } from "../../hooks/useFetch";
+import { useFilter } from "../../hooks/useFilter";
 import { useMobile } from "../../hooks/useMobile";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
 
 import ArrowIcons from "../../icons/ArrowIcons";
-import Dropdown from "../Dropdown";
+import FilterDropdown from "../FilterDropdown";
 import Heading from "../../typographies/Heading";
 import InvoiceIcons from "../../icons/InvoiceIcons";
 import Paragraph from "../../typographies/Paragraph";
-import { useFetch } from "../../hooks/useFetch";
 
 const Component = () => {
-  const { data } = useFetch("invoices");
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { data } = useFetch("invoices");
   const { theme } = useTheme();
+  const { countFilteredInvoices } = useFilter();
   const isMobile = useMobile();
   const navigate = useNavigate();
 
@@ -23,8 +25,10 @@ const Component = () => {
   };
 
   const handleNavigate = () => {
-    navigate("/invoice-app-web/new-invoice");
+    navigate("/invoice-app-web/new-invoie");
   };
+
+  const countInvoice = countFilteredInvoices(data);
 
   return (
     <header className="mx-6 mt-8 flex justify-between md:mx-12 md:mt-12 xl:mx-[350px] xl:-mt-[90vh]">
@@ -34,17 +38,27 @@ const Component = () => {
           content="Invoices"
           css={`text-2xl md:text-3xl xl:text-5xl font-bold ${theme ? "text-white" : "text-vulcan"}`}
         />
-        <Paragraph
-          kind="p"
-          content={
-            isMobile
-              ? `${data.length} invoices`
-              : `There are ${data.length} invoices`
-          }
-          css={`
-            ${theme ? "text-selago" : "text-baliHai"}
-          `}
-        />
+        {countInvoice === 0 ? (
+          <Paragraph
+            kind="p"
+            content="No Invoices"
+            css={`
+              ${theme ? "text-selago" : "text-baliHai"}
+            `}
+          />
+        ) : (
+          <Paragraph
+            kind="p"
+            content={
+              isMobile
+                ? `${countInvoice} invoice${countInvoice === 1 ? "" : "s"}`
+                : `There ${countInvoice === 1 ? "is" : "are"} ${countInvoice} invoice${countInvoice === 1 ? "" : "s"} in total`
+            }
+            css={`
+              ${theme ? "text-selago" : "text-baliHai"}
+            `}
+          />
+        )}
       </div>
 
       <div className="flex gap-5 self-center md:gap-10">
@@ -59,7 +73,7 @@ const Component = () => {
 
           {isOpen ? <ArrowIcons kind="up" /> : <ArrowIcons kind="down" />}
         </div>
-        {isOpen && <Dropdown callback={setIsOpen} />}
+        {isOpen && <FilterDropdown callback={setIsOpen} />}
 
         <button
           className="flex rounded-full bg-cornflowerBlue p-4 font-bold text-white hover:bg-heliotrope"

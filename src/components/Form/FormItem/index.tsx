@@ -9,7 +9,6 @@ const Component = ({ itemName, quantity, price }: FormItems) => {
   const { theme } = useTheme();
   const theming = theme ? "border-baliHai bg-mirage" : "bg-white";
 
-
   return (
     <>
       <div className="mt-3">

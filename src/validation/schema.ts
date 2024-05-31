@@ -17,7 +17,7 @@ export const formSchema = Yup.object().shape({
   payment_due: Yup.string().required("Required"),
   payment_terms: Yup.string().required("Required"),
   description: Yup.string().required("Required"),
-  
+
   items: Yup.array().of(
     Yup.object().shape({
       name: Yup.string().required("Required"),

@@ -6,7 +6,7 @@ export const useItem = () => {
 
   if (!context)
     throw new Error(
-      "Error with the context, the provider is présent in the main file?",
+      "Error with the context, the provider is prrsent in the main file?",
     );
 
   return context;

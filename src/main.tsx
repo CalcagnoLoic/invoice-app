@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { DarkModeProvider } from "./context/DarkModeContext";
+import { FilterProvider } from "./context/FIlterContext";
 import { ItemsProvider } from "./context/ItemsContext";
 
 import "../public/assets/style/tailwind.css";
@@ -16,26 +17,28 @@ import ReactDOM from "react-dom/client";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <DarkModeProvider>
-      <ItemsProvider>
-        <Router>
-          <NavBar />
-          <Routes>
-            <Route path="/invoice-app-web" element={<Homepage />} />
-            <Route path="/invoice-app-web/:id" element={<Details />} />
+      <FilterProvider>
+        <ItemsProvider>
+          <Router>
+            <NavBar />
+            <Routes>
+              <Route path="/invoice-app-web" element={<Homepage />} />
+              <Route path="/invoice-app-web/:id" element={<Details />} />
 
-            <Route
-              path="/invoice-app-web/new-invoice"
-              element={<NewInvoice />}
-            />
-            <Route
-              path="/invoice-app-web/edit-invoice/:id"
-              element={<EditInvoice />}
-            />
+              <Route
+                path="/invoice-app-web/new-invoice"
+                element={<NewInvoice />}
+              />
+              <Route
+                path="/invoice-app-web/edit-invoice/:id"
+                element={<EditInvoice />}
+              />
 
-            <Route path="*" element={<Error404 />} />
-          </Routes>
-        </Router>
-      </ItemsProvider>
+              <Route path="*" element={<Error404 />} />
+            </Routes>
+          </Router>
+        </ItemsProvider>
+      </FilterProvider>
     </DarkModeProvider>
   </React.StrictMode>,
 );

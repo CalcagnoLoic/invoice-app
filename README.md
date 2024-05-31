@@ -6,11 +6,9 @@
   </a>
 </p>
 
-
 ## Pour lancer le frontend
 
 ```cmd
 $ cd web
 $ npm run i
 $ npm run dev
-```

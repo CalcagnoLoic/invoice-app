@@ -5,7 +5,11 @@ const Typography = ({ kind, content, css, onClick }: ParagraphProps) => {
     case "p":
       return <p className={css}>{content}</p>;
     case "span":
-      return <span className={css} onClick={onClick}>{content}</span>;
+      return (
+        <span className={css} onClick={onClick}>
+          {content}
+        </span>
+      );
     default:
       return null;
   }
