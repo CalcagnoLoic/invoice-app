@@ -91,7 +91,7 @@ export interface ParagraphProps extends ContentProps {
 export interface DropdownType {
   id: number;
   content: string;
-  link: string;
+  link: keyof Filter;
 }
 
 export interface CallbackProps {
@@ -128,4 +128,17 @@ export interface FormItems {
   itemName: string;
   quantity: string;
   price: string;
+}
+
+export interface Filter {
+  paid: boolean;
+  pending: boolean;
+  draft: boolean;
+}
+
+export interface FilterValues {
+  filters: Filter;
+  toggleFilter: (newValue: keyof Filter) => void;
+  filterInvoices: (newValue: Invoice[]) => Invoice[];
+  countFilteredInvoices: (invoices: Invoice[]) => number;
 }

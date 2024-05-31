@@ -2,6 +2,7 @@ import { convertDate } from "../../../utils/convertDate";
 import { convertPrice } from "../../../utils/convertPrice";
 import { Invoice, InvoiceProps } from "../../../types/interface";
 import { Link } from "react-router-dom";
+import { useFilter } from "../../../hooks/useFilter";
 import { useTheme } from "../../../hooks/useTheme";
 
 import InvoiceStatus from "../InvoiceStatus";
@@ -9,10 +10,14 @@ import Paragraph from "../../../typographies/Paragraph";
 
 const Component = ({ data }: InvoiceProps) => {
   const { theme } = useTheme();
+  const { filterInvoices, filters } = useFilter();
+  
+  const noFiltersSelected = Object.values(filters).every(filter => !filter);
+  const filteredData = noFiltersSelected ? data : filterInvoices(data);
 
   return (
     <>
-      {data.map((invoice: Invoice, index: number) => (
+      {filteredData.map((invoice: Invoice, index: number) => (
         <Link to={`${invoice.id}`}>
           <div
             className={`mb-4 flex w-full flex-col rounded-xl  px-6 py-6 shadow-lg ${theme ? "bg-mirage" : "bg-white"}`}

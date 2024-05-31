@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { formSchema } from "../../validation/schema";
 import { FormSend } from "../../types/interface";
@@ -19,11 +18,6 @@ const Container = ({ FormSend }: FormSend) => {
   const { itemCount, addItems } = useItem();
   const { theme } = useTheme();
   const theming = theme ? "border-baliHai bg-mirage" : "bg-white";
-
-  /* const handleSubmit = async (values: any, { setSubmitting }: any) => {
-    setSubmitting(false);
-    console.log(values);
-  }; */
 
   return (
     <Formik

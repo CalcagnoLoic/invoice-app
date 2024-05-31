@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import { DarkModeContext } from "../context/DarkModeContext";
+import { FilterContext } from "../context/FIlterContext";
 
-export const useTheme = () => {
-  const context = useContext(DarkModeContext);
+export const useFilter = () => {
+  const context = useContext(FilterContext);
 
   if (!context)
     throw new Error(

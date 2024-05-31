@@ -1,11 +1,13 @@
 import { dropdownItems } from "../../data/data";
 import { CallbackProps, DropdownType } from "../../types/interface";
 import { useClickOutside } from "../../hooks/useClickOutside";
+import { useFilter } from "../../hooks/useFilter";
 import { useRef } from "react";
 import { useTheme } from "../../hooks/useTheme";
 
 const Component = ({ callback }: CallbackProps) => {
   const { theme } = useTheme();
+  const { filters, toggleFilter } = useFilter();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useClickOutside({ callback: callback, ref: dropdownRef });
@@ -22,6 +24,8 @@ const Component = ({ callback }: CallbackProps) => {
             name={items.link}
             id={items.link}
             className="accent-cornflowerBlue"
+            checked={filters[items.link]}
+            onChange={() => toggleFilter(items.link)}
           />
           <label
             htmlFor={items.link}
