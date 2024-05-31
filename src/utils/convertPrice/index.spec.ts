@@ -7,7 +7,7 @@ describe("convertPrice Unit Test Suite", () => {
   });
 
   it("should be return 512.2", () => {
-    expect(convertPrice(512.2)).toBe("512.2");
+    expect(convertPrice(512.2)).toBe("512.20");
   });
 
   it("should be return 12,485.45", () => {
@@ -15,6 +15,6 @@ describe("convertPrice Unit Test Suite", () => {
   });
 
   it("should be return 123,456,789.00", () => {
-    expect(convertPrice(123456789.0)).toBe("123,456,789");
+    expect(convertPrice(123456789.0)).toBe("123,456,789.00");
   });
 });
