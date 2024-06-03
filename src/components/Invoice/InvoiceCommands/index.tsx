@@ -11,16 +11,24 @@ const Component = ({ invoiceStatus, id, theme }: Status) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const popupRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  useClickOutside({ callback: setIsOpen, ref: popupRef });
 
   const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
     e.stopPropagation();
     setIsOpen((prevState) => !prevState);
   };
 
-  useClickOutside({ callback: setIsOpen, ref: popupRef });
-
   const handleEdit = () => {
     navigate(`/invoice-app-web/edit-invoice/${id}`);
+  };
+
+  const handleDelete = async () => {
+    await fetch(`http://localhost:8000/remove-invoice/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: id }),
+    });
+    navigate("/invoice-app-web/");
   };
 
   return (
@@ -69,7 +77,11 @@ const Component = ({ invoiceStatus, id, theme }: Status) => {
                 css="text-baliHai bg-selago"
                 onClick={(e) => handleClick(e)}
               />
-              <Button content="Delete" css="bg-burntSienna text-white" />
+              <Button
+                content="Delete"
+                css="bg-burntSienna text-white"
+                onClick={handleDelete}
+              />
             </div>
           </div>
         </>

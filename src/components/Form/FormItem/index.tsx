@@ -58,6 +58,7 @@ const Component = ({ itemName, quantity, price }: FormItems) => {
           <Field
             className={`mt-2 w-full max-w-full rounded-lg p-4 font-bold outline-none ${theme ? "bg-mirage" : "bg-whisper"}`}
             name="total"
+            placeholder="Total"
           />
         </div>
 
