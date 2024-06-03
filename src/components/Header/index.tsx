@@ -25,7 +25,7 @@ const Component = () => {
   };
 
   const handleNavigate = () => {
-    navigate("/invoice-app-web/new-invoie");
+    navigate("/invoice-app-web/new-invoice");
   };
 
   const countInvoice = countFilteredInvoices(data);
