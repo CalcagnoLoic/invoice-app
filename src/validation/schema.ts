@@ -14,8 +14,8 @@ export const formSchema = Yup.object().shape({
   client_postCode: Yup.string().required("Required"),
   client_country: Yup.string().required("Required"),
 
-  payment_due: Yup.string().required("Required"),
-  payment_terms: Yup.string().required("Required"),
+  created_at: Yup.string().required("Required"),
+  payment_terms: Yup.number().required("Required"),
   description: Yup.string().required("Required"),
 
   items: Yup.array().of(

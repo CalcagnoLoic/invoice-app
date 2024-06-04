@@ -9,10 +9,10 @@ const Component = () => {
   return (
     <>
       <div className="flex flex-col">
-        <Label htmlFor="payment_due" content="Invoice Date" />
+        <Label htmlFor="created_at" content="Invoice Date" />
         <Field
           className={`form-input text-baliHai ${theming}`}
-          name="payment_due"
+          name="created_at"
           type="date"
           css="md:w-full"
         />
