@@ -1,6 +1,6 @@
 # Invoice App
 
-🚧 Please note that the application is currently under development and is only available locally. To run it on your computer, please refer [here](https://github.com/CalcagnoLoic/invoice-app-server) for backend installation. Thank you for your understanding.🚧
+🚧 Please note that the application is currently under development and is only available locally. To run it on your computer, please refer [here](https://github.com/CalcagnoLoic/invoice-app-server?tab=readme-ov-file#launching-backend--docker-compose) for backend installation. Thank you for your understanding.🚧
 
 <p align="center">
   <a href="https://skillicons.dev">
@@ -39,9 +39,9 @@ npm run dev
 
 Your users should be able to:
 
-- [] Create, read, update, and delete invoices <kbd>In Progress</kbd>
-- [] Receive form validations when trying to create/edit an invoice <kbd>In Progress</kbd>
-- [] Save draft invoices, and mark pending invoices as paid
+- [ ] Create, read, update, and delete invoices <kbd>In Progress</kbd>
+- [ ] Receive form validations when trying to create/edit an invoice <kbd>In Progress</kbd>
+- [ ] Save draft invoices, and mark pending invoices as paid
 - [x] Filter invoices by status (draft/pending/paid)
 - [x] Toggle light and dark mode
 - [x] View the optimal layout for the app depending on their device's screen size
