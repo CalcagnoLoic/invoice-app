@@ -17,7 +17,7 @@ export const initialValues = {
   client_city: "",
   client_postCode: "",
   client_country: "",
-  payment_due: "",
+  created_at: "",
   payment_terms: "",
   description: "",
   items: [

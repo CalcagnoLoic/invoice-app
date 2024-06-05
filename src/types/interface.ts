@@ -24,7 +24,7 @@ export interface Invoice {
   created_at: string;
   payment_due: string;
   description: string;
-  paymentTerms: number;
+  payment_terms: number;
   client_name: string;
   client_email: string;
   status: string;
